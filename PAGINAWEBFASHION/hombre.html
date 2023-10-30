@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLAMOUR FASHION</title>
+    <link rel="icon" href="imagenes/logo_sin_fondo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="secundarios.css">
+    
+</head>
+<body>
+
+    <header id="pageHeader">
+        <h1 href="index.html">GLAMOUR FASHION</h1>
+           <nav>
+               <ul class="menu">
+                   <li><a href="index.html">INICIO</a></li>
+                   <li><a href="mujer.html">MUJER</a></li>
+                   <li><a href="niños.html">NIÑOS</a></li>
+                   <li><a href="accesorios.html">ACCESORIOS</a></li>
+                   <li class="logo-menu">
+                       <img src="imagenes/logo_sin_fondo.png" alt="Logo de la Empresa">
+                   </li>
+               </ul> 
+               <div class="hamburger">
+                   <div class="line1__bar"></div>
+                   <div class="line2__bar"></div>
+                   <div class="line3__bar"></div>
+               </div>
+           </nav>
+   
+           <!-- Icono de la bolsa de compras -->
+           <a id="cartLink">
+            <button id="botoncarrito" class="fas fa-shopping-bag"></i></button>   
+           </a>
+   
+           <!-- Campo de búsqueda -->
+           <div id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="searchResults"></div>
+
+
+        
+        
+       
+       </header>
+   
+
+    <h2>PANTALONES</h2>
+
+    <!-- Producto 1 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Pantalón 1</h3>
+    <p data-precio="30.00">Precio: $30.00</p>
+    <p>Descripción: Este elegante pantalón negro es perfecto para ocasiones formales.</p>
+
+    <!-- Etiqueta y cuadro desplegable para Color -->
+    <label for="color1">Color:</label>
+    <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+
+    <!-- Etiqueta y cuadro desplegable para Talla -->
+    <label for="talla1">Talla:</label>
+    <select class="seleccion-talla" id="talla1" name="talla1">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="XL">XL</option>
+    </select>
+    
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Repite este bloque para más productos de pantalones (Producto 2 al 10) -->
+
+    
+    <!-- Producto 2 -->
+    <div class="producto">
+        <img src="imagenes/camisa.png" data-color="negro">
+        <h3>Pantalón 2</h3>
+        <p data-precio="35.00">Precio: $35.00</p>
+        <p>Descripción: Pantalón de mezclilla azul, perfecto para un look casual y cómodo.</p>
+           <!-- Etiqueta y cuadro desplegable para Color -->
+    <label for="color1">Color:</label>
+    <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+    <!-- Etiqueta y cuadro desplegable para Talla -->
+    <label for="talla1">Talla:</label>
+    <select class="seleccion-talla" id="talla1" name="talla1">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="XL">XL</option>
+    </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+    
+    <!-- Repite este bloque para más productos de pantalones (Producto 3 al 10) -->
+
+    <!-- Producto 3 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Pantalón 3</h3>
+    <p data-precio="30.00">Precio: $30.00</p>
+    <p>Descripción: Pantalón de vestir de color gris, perfecto para ocasiones elegantes.</p>
+  <!-- Etiqueta y cuadro desplegable para Color -->
+    <label for="color1">Color:</label>
+    <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+
+    <!-- Etiqueta y cuadro desplegable para Talla -->
+    <label for="talla1">Talla:</label>
+    <select class="seleccion-talla" id="talla1" name="talla1">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="XL">XL</option>
+    </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 4 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Pantalón 4</h3>
+    <p data-precio="35.00">Precio: $35.00</p>
+    <p>Descripción: Pantalón casual de mezclilla azul, ideal para uso diario.</p>
+    <!-- Etiqueta y cuadro desplegable para Color -->
+    <label for="color1">Color:</label>
+    <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+
+    <!-- Etiqueta y cuadro desplegable para Talla -->
+    <label for="talla1">Talla:</label>
+    <select class="seleccion-talla" id="talla1" name="talla1">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="XL">XL</option>
+    </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 5 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Pantalón 5</h3>
+    <p data-precio="28.00">Precio: $28.00</p>
+    <p>Descripción: Pantalón negro clásico para múltiples ocasiones.</p>
+      <!-- Etiqueta y cuadro desplegable para Color -->
+      <label for="color1">Color:</label>
+      <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+  
+      <!-- Etiqueta y cuadro desplegable para Talla -->
+      <label for="talla1">Talla:</label>
+      <select class="seleccion-talla" id="talla1" name="talla1">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="XL">XL</option>
+      </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 6 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Pantalón 6</h3>
+    <p data-precio="32.00">Precio: $32.00</p>
+    <p>Descripción: Pantalón de mezclilla azul con un toque moderno.</p>
+      <!-- Etiqueta y cuadro desplegable para Color -->
+      <label for="color1">Color:</label>
+      <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+  
+      <!-- Etiqueta y cuadro desplegable para Talla -->
+      <label for="talla1">Talla:</label>
+      <select class="seleccion-talla" id="talla1" name="talla1">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="XL">XL</option>
+      </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 7 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Pantalón 7</h3>
+    <p data-precio="30.00">Precio: $30.00</p>
+    <p>Descripción: Pantalón de vestir de color gris, perfecto para ocasiones elegantes.</p>
+      <!-- Etiqueta y cuadro desplegable para Color -->
+      <label for="color1">Color:</label>
+      <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+  
+      <!-- Etiqueta y cuadro desplegable para Talla -->
+      <label for="talla1">Talla:</label>
+      <select class="seleccion-talla" id="talla1" name="talla1">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="XL">XL</option>
+      </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 8 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Pantalón 8</h3>
+    <p data-precio="35.00">Precio: $35.00</p>
+    <p>Descripción: Pantalón casual de mezclilla azul, ideal para uso diario.</p>
+       <!-- Etiqueta y cuadro desplegable para Color -->
+       <label for="color1">Color:</label>
+       <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+   
+       <!-- Etiqueta y cuadro desplegable para Talla -->
+       <label for="talla1">Talla:</label>
+       <select class="seleccion-talla" id="talla1" name="talla1">
+           <option value="S">S</option>
+           <option value="M">M</option>
+           <option value="XL">XL</option>
+       </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 9 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Pantalón 9</h3>
+    <p data-precio="28.00">Precio: $28.00</p>
+    <p>Descripción: Pantalón negro clásico para múltiples ocasiones.</p>
+   
+       <!-- Etiqueta y cuadro desplegable para Color -->
+       <label for="color1">Color:</label>
+       <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+   
+       <!-- Etiqueta y cuadro desplegable para Talla -->
+       <label for="talla1">Talla:</label>
+       <select class="seleccion-talla" id="talla1" name="talla1">
+           <option value="S">S</option>
+           <option value="M">M</option>
+           <option value="XL">XL</option>
+       </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 10 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Pantalón 10</h3>
+    <p data-precio="32.00">Precio: $32.00</p>
+    <p>Descripción: Pantalón de mezclilla azul con un toque moderno.</p>
+       <!-- Etiqueta y cuadro desplegable para Color -->
+       <label for="color1">Color:</label>
+       <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+   
+       <!-- Etiqueta y cuadro desplegable para Talla -->
+       <label for="talla1">Talla:</label>
+       <select class="seleccion-talla" id="talla1" name="talla1">
+           <option value="S">S</option>
+           <option value="M">M</option>
+           <option value="XL">XL</option>
+       </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+    
+    
+    <h2>CAMISAS</h2>
+<!-- Producto 11 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Camisa 11</h3>
+    <p data-precio="25.00">Precio: $25.00</p>
+    <p>Descripción: Camisa de manga larga en color rojo intenso.</p>
+      <!-- Etiqueta y cuadro desplegable para Color -->
+      <label for="color1">Color:</label>
+      <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+  
+      <!-- Etiqueta y cuadro desplegable para Talla -->
+      <label for="talla1">Talla:</label>
+      <select class="seleccion-talla" id="talla1" name="talla1">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="XL">XL</option>
+      </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 12 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Camisa 12</h3>
+    <p data-precio="30.00">Precio: $30.00</p>
+    <p>Descripción: Camisa de manga corta en color azul claro con rayas.</p>
+      <!-- Etiqueta y cuadro desplegable para Color -->
+      <label for="color1">Color:</label>
+      <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+  
+      <!-- Etiqueta y cuadro desplegable para Talla -->
+      <label for="talla1">Talla:</label>
+      <select class="seleccion-talla" id="talla1" name="talla1">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="XL">XL</option>
+      </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 13 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Camisa 13</h3>
+    <p data-precio="28.00">Precio: $28.00</p>
+    <p>Descripción: Camisa de lino en color blanco con estilo fresco.</p>
+       <!-- Etiqueta y cuadro desplegable para Color -->
+       <label for="color1">Color:</label>
+       <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+   
+       <!-- Etiqueta y cuadro desplegable para Talla -->
+       <label for="talla1">Talla:</label>
+       <select class="seleccion-talla" id="talla1" name="talla1">
+           <option value="S">S</option>
+           <option value="M">M</option>
+           <option value="XL">XL</option>
+       </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 14 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Camisa 14</h3>
+    <p data-precio="35.00">Precio: $35.00</p>
+    <p>Descripción: Camisa formal en color negro con botones dorados.</p>
+      <!-- Etiqueta y cuadro desplegable para Color -->
+      <label for="color1">Color:</label>
+      <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+  
+      <!-- Etiqueta y cuadro desplegable para Talla -->
+      <label for="talla1">Talla:</label>
+      <select class="seleccion-talla" id="talla1" name="talla1">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="XL">XL</option>
+      </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 15 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Camisa 15</h3>
+    <p data-precio="32.00">Precio: $32.00</p>
+    <p>Descripción: Camisa de manga larga en color blanco con diseño a rayas.</p>
+      <!-- Etiqueta y cuadro desplegable para Color -->
+      <label for="color1">Color:</label>
+      <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+  
+      <!-- Etiqueta y cuadro desplegable para Talla -->
+      <label for="talla1">Talla:</label>
+      <select class="seleccion-talla" id="talla1" name="talla1">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="XL">XL</option>
+      </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 16 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Camisa 16</h3>
+    <p data-precio="28.00">Precio: $28.00</p>
+    <p>Descripción: Camisa casual en color azul con estilo desenfadado.</p>
+      <!-- Etiqueta y cuadro desplegable para Color -->
+      <label for="color1">Color:</label>
+      <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+  
+      <!-- Etiqueta y cuadro desplegable para Talla -->
+      <label for="talla1">Talla:</label>
+      <select class="seleccion-talla" id="talla1" name="talla1">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="XL">XL</option>
+      </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 17 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Camisa 17</h3>
+    <p data-precio="35.00">Precio: $35.00</p>
+    <p>Descripción: Camisa formal en color negro con botones plateados.</p>
+    <!-- Etiqueta y cuadro desplegable para Color -->
+    <label for="color1">Color:</label>
+    <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+
+    <!-- Etiqueta y cuadro desplegable para Talla -->
+    <label for="talla1">Talla:</label>
+    <select class="seleccion-talla" id="talla1" name="talla1">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="XL">XL</option>
+    </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 18 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Camisa 18</h3>
+    <p data-precio="32.00">Precio: $32.00</p>
+    <p>Descripción: Camisa de manga corta en color blanco con diseño estampado.</p>
+     <!-- Etiqueta y cuadro desplegable para Color -->
+     <label for="color1">Color:</label>
+     <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+ 
+     <!-- Etiqueta y cuadro desplegable para Talla -->
+     <label for="talla1">Talla:</label>
+     <select class="seleccion-talla" id="talla1" name="talla1">
+         <option value="S">S</option>
+         <option value="M">M</option>
+         <option value="XL">XL</option>
+     </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 19 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Camisa 19</h3>
+    <p data-precio="30.00">Precio: $30.00</p>
+    <p>Descripción: Camisa casual en color negro con cuello en V.</p>
+      <!-- Etiqueta y cuadro desplegable para Color -->
+      <label for="color1">Color:</label>
+      <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+  
+      <!-- Etiqueta y cuadro desplegable para Talla -->
+      <label for="talla1">Talla:</label>
+      <select class="seleccion-talla" id="talla1" name="talla1">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="XL">XL</option>
+      </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+<!-- Producto 20 -->
+<div class="producto">
+    <img src="imagenes/camisa.png" data-color="negro">
+    <h3>Camisa 20</h3>
+    <p data-precio="25.00">Precio: $25.00</p>
+    <p>Descripción: Camisa de manga larga en color azul con rayas verticales.</p>
+       <!-- Etiqueta y cuadro desplegable para Color -->
+       <label for="color1">Color:</label>
+       <select class="seleccion-color">
+        <option value="rojo" data-imagen="imagenes/1.jpg">Rojo</option>
+        <option value="azul" data-imagen="imagenes/2.jpg">Azul</option>
+        <option value="negro" data-imagen="imagenes/camisa.png">Negro</option>
+    </select>
+       <!-- Etiqueta y cuadro desplegable para Talla -->
+       <label for="talla1">Talla:</label>
+       <select class="seleccion-talla" id="talla1" name="talla1">
+           <option value="S">S</option>
+           <option value="M">M</option>
+           <option value="XL">XL</option>
+       </select>
+    <button class="agregar-al-carrito">Agregar al Carrito</button>
+</div>
+
+
+<!-- Botón para mostrar/ocultar el carrito de compras -->
+
+
+<div id="cartContainer">
+    <button id="cerrarCarrito" class="cerrar-carrito">X</button> <!-- Icono de "x" para cerrar el carrito -->
+    <h3>Carrito de Compras</h3>
+    <ul id="carrito">
+        <!-- Contenido del carrito -->
+    </ul>
+    <p id="total">Total: $0.00</p>
+    <button id="finalizarCompra">Finalizar Compra</button>
+</div>
+
+
+
+
+
+    
+    
+  <!-- Sección 5 -->
+  <section id="seccion5" class="black-section">
+    <div class="content">
+        <h1>GLAMOUR FASHION</h1>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100094503772606&mibextid=LQQJ4d/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@glamour.fashion.s?_t=8gBPcPesUOD&_r=1/"><i class="fab fa-tiktok"></i></a>
+            <a href="https://instagram.com/glamour_fashion_ss?igshid=NzZlODBkYWE4Ng==/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/+573174899803/?text=Hola,%20estaba%20en%20la%20página%20web%20y%20me%20gustaría%20hablar%20con%20un%20asesor"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        <p>Síguenos en nuestras redes sociales</p>
+        <div class="contact-form">
+            <h3>Contacto</h3>
+            <form action="https://formsubmit.co/fashionssglamour@gmail.com" method="POST" enctype="multipart/form-data" class="form">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <textarea name="mensaje" placeholder="Mensaje" rows="3" required></textarea>
+                <button type="submit" class="btn-enviar">Enviar</button>
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Pie de página -->
+<footer>
+    <h6>Sitio – administrado por INFINIT TECNOLOGY - copyright © GLAMOUR FASHION  2023 - Todos los derechos reservados - La reproducción de contenido está estrictamente prohibida.</h6>
+</footer>
+
+<script src="generales.js"></script>
+<script src="https://cdn.jsdelivr.net/mark.js/8.11.1/mark.min.js"></script>
+
+</body>
+</html>

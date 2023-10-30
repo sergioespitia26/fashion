@@ -1,0 +1,1093 @@
+/* Estilos generales */
+body {
+    font-family: serif, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.button a {
+    text-decoration: none; /* Quitar la línea decorativa */
+    color: #000000;/* Cambiar el color del texto a amarillo (#ffcc00) */
+}
+.button a:hover{
+    color: #000;
+}
+
+
+
+/* Estilos para pantallas grandes (mayores de 768px de ancho) */
+@media screen and (min-width: 768px) {
+
+    #pageHeader {
+        background-color:transparent; /* Color de fondo con opacidad */
+        color: #ffffff;
+        text-align: center;
+        padding: 1px;
+        transition: background-color 0.3s ease; /* Transición de color de fondo suave */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Aseguramos que el encabezado esté por encima del contenido */
+    }
+    
+    
+    #pageHeader.hidden {
+        top: -1000px; /* Movemos el encabezado fuera de la pantalla al ocultarlo */
+    }
+    
+    /* Cambiar el fondo a blanco y el texto a negro al pasar el cursor */
+    #pageHeader:hover {
+        background-color: #fff; /* Fondo blanco */
+        color: #000; /* Texto y elementos negros */
+    }
+    
+    /* Cambiar el tamaño del texto de h1 en el encabezado */
+    #pageHeader h1 {
+        font-size: 100px; /* Ajusta el tamaño del texto según tus preferencias */
+        font-weight: bold; /* Aplicar negrita */
+    }
+    
+    
+    #pageHeader nav {
+        list-style: none;
+        padding: 0;
+        margin-top: -60px;
+    }
+    
+    #pageHeader nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #pageHeader nav ul li {
+        margin: 0 20px;
+    }
+    
+    #pageHeader nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: color 0.3s ease; /* Transición suave del color del enlace */
+    }
+    
+    
+    
+    
+    
+    /*icono bolsita ajuste de pocision*/
+    #cartLink {
+        position: fixed;
+        top: 3px; /* Ajusta la distancia desde la parte superior */
+        right: 5px; /* Ajusta la distancia desde la derecha */
+        color: #fff;
+        font-size: 22px;
+        
+    }
+    
+    /*cambio de color el icono bolsito, items de menu,busqueda cuando el fondo del encabezado este blanco*/
+    #pageHeader:hover #searchButton,
+    #pageHeader:hover #searchContainer,
+    #pageHeader:hover #botoncarrito,
+    #pageHeader:hover nav ul li a {
+        color: #000; /* Cambiar a color negro cuando el fondo es blanco */
+    }
+
+    #pageHeader #botoncarrito:hover {
+        color: #ff00d4 !important;   
+    }
+    
+    /*mostrar linea de bajo cuando ppase el cursor*/
+    #pageHeader #searchButton:hover, 
+    #pageHeader nav ul li:hover{
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 2px solid #000;
+    }
+    
+     
+        
+    
+    /* Estilos para el campo de búsqueda */
+    #searchContainer {
+        position: fixed;
+        top: 20px; /* Ajusta la distancia desde la parte superior */
+        right: 100px; /* Ajusta la distancia desde la derecha */
+        color: #fff;
+        font-size: 18px;    
+    }
+    
+    #searchInput {
+        padding: 5px;
+        border: none;
+        border-bottom: 1px solid #333; /* Línea inferior de color gris oscuro */
+        outline: none;
+        font-size: 16px;
+        margin-right: 10px;
+        background-color: transparent; /* Fondo transparente */
+        color: #333; /* Color del texto en el campo de búsqueda */
+        transition: border-color 0.3s ease; /* Transición suave del color de borde */
+    }
+    
+    #searchInput:focus {
+        border-color: #ff08ca; /* Color de borde al enfocar el campo */
+    }
+    
+    #searchButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #ffffff; /* Color del icono de búsqueda */
+        font-size: 20px;
+       
+    }
+    
+
+/* Estilos para carrito de comprAS */
+
+/* Estilos para el botón del carrito */
+/* Estilos para el botón de carrito */
+
+/* Estilos para el botón de cerrar carrito (ícono "x") */
+
+/* Estilos para el botón de cierre del carrito */
+.cerrar-carrito {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical según tu preferencia */
+    right: 10px; /* Ajusta la posición horizontal según tu preferencia */
+    background-color: #333; /* Color de fondo gris oscuro */
+    color: #fff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Hace que el botón sea circular */
+    width: 30px; /* Ancho del botón */
+    height: 30px; /* Altura del botón */
+    font-size: 18px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse por encima */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: beat 1s infinite; /* Aplica la animación de latido */
+}
+
+.cerrar-carrito:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+/* Animación de latido */
+@keyframes beat {
+    0% { transform: scale(1); } /* Escala normal */
+    50% { transform: scale(1.1); } /* Escala aumentada al 50% */
+    100% { transform: scale(1); } /* Regresa a la escala normal */
+}
+
+
+#botoncarrito {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+    animation: latido 1s infinite alternate; /* Agregar la animación de latido */
+}
+
+/* Definición de la animación de latido */
+@keyframes latido {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(2.1);
+    }
+}
+#botoncarrito:hover{
+    background-color: transparent;
+    color: #ff0ac2;
+}
+
+
+/* Estilos para el contenedor del carrito */
+#cartContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 10px;
+    z-index: 1000;
+    display: none;
+}
+
+/* Estilos para el título del carrito */
+#cartContainer h3 {
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilos para la lista de elementos en el carrito */
+#carrito {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos para cada elemento en el carrito */
+#carrito li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para el total */
+#total {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Estilos para el botón de finalizar compra */
+#finalizarCompra {
+    background-color: #0c0c0c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px ;
+    
+    
+}
+#finalizarCompra:hover {
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #000000; /* Agrega un borde negro al botón al hacer hover */
+}
+
+
+
+
+
+
+
+
+
+/* Estilos para el botón de eliminar con el ícono "x" */
+.eliminar-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+}
+
+
+.button a {
+    text-decoration: none; /* Quitar la línea decorativa */
+    color: #ffffff;/* Cambiar el color del texto a amarillo (#ffcc00) */
+}
+.button a:hover{
+    color: #000;
+}
+
+
+
+/* Estilos para las secciones */
+section {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    padding: 40px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    margin: 100px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.button {
+    font-size: 11px;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    position: absolute;
+    margin: 80px;
+    overflow: hidden;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Margen de abajo */
+    left: 0;
+    width: 100%;
+    height: 1px; /* Altura de la línea blanca */
+    background-color: #fff; /* Color de la línea blanca */
+    
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.button:hover::before {
+    transform: scaleY(1);
+    transition: none; /* Puedes eliminar esta línea si no deseas transición */
+}
+
+
+
+
+/* Estilos para la Sección 1 */
+#seccion1 {
+    background-image: url('imagenes/Black\ Modern\ Fashion\ Studio\ Presentation.jpg'); /* Cambia 'imagen-seccion1.jpg' por la imagen de fondo de la Sección 1 */
+    padding: 250px;
+    
+}
+
+/* Estilos para la Sección 2 */
+#seccion2 {
+    background-image: url('imagenes/1.jpg'); /* Cambia 'imagen-seccion2.jpg' por la imagen de fondo de la Sección 2 */
+    padding: 250px;
+}
+
+
+#seccion3,
+#seccion4 {
+    width: 50%; /* Asigna el 50% del ancho a cada sección para crear dos columnas */
+    float: left; /* Hace que las secciones floten a la izquierda */
+    box-sizing: border-box; /* Asegura que el ancho incluya el relleno y el borde */
+    padding: 20px; /* Añade espacio entre las secciones */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    height: 400px; /* Ajusta la altura deseada para cada sección */
+}
+
+#seccion3 {
+    width: 50%; /* Asigna el 50% del ancho a la sección 3 para crear dos columnas */
+    float: left; /* Hace que la sección 3 flote a la izquierda */
+    box-sizing: border-box; /* Asegura que el ancho incluya el relleno y el borde */
+    padding: 20px; /* Añade espacio entre las secciones */
+    background-image: url('imagenes/1.jpg'); /* Cambia 'imagen-seccion3.jpg' por tu imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+#seccion4 {
+    width: 50%; /* Asigna el 50% del ancho a la sección 4 para crear dos columnas */
+    float: left; /* Hace que la sección 4 flote a la izquierda */
+    box-sizing: border-box; /* Asegura que el ancho incluya el relleno y el borde */
+    padding: 20px; /* Añade espacio entre las secciones */
+    background-image: url('imagenes/2.jpg'); /* Cambia 'imagen-seccion4.jpg' por tu imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+
+
+/* Estilos adicionales para la Sección 5 */
+#seccion5 {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto en blanco */
+    text-align: center;
+    
+}
+
+#seccion5 h2 {
+    font-size: 36px;
+    margin-bottom: 20px; /* Espacio bajo el título */
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s; /* Transición de color al pasar el cursor */
+}
+
+.social-icons a:hover {
+    color: #ff00dd; /* Color gris claro al pasar el cursor */
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 40px; /* Espacio bajo el párrafo */
+}
+
+.contact-form {
+    margin-top: 40px;
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: transparent; /* Fondo transparente para los campos de entrada y el botón */
+    border: 1px solid #fff; /* Borde blanco para los campos de entrada y el botón */
+    color: #fff; /* Texto en blanco */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbbbbb; /* Color gris claro para el marcador de posición */
+}
+
+.contact-form button {
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #fff; /* Botón de fondo blanco */
+    color: #000; /* Texto negro para el botón */
+    transition: background-color 0.3s, color 0.3s; /* Transición de color de fondo y texto al pasar el cursor */
+}
+
+.contact-form button:hover {
+    background-color: #000; /* Color de fondo negro al pasar el cursor */
+    color: #fff; /* Texto blanco al pasar el cursor */
+}
+
+
+/* Estilos para el botón de enviar */
+/* Estilos para el botón de enviar */
+.btn-enviar {
+    background-color: white;
+    color: black;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px; /* Centra el botón horizontalmente */
+}
+
+
+
+
+/* Pie de página */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align:center;
+    padding: 1px 10px;
+    margin-top: 1px;
+    font-size: 16px;
+}
+
+.logo-menu{
+    display: none;
+}
+
+
+}
+
+/* Estilos para pantallas pequeñas (768px o menos de ancho) */
+@media screen and (max-width: 768px) {
+    /* Ocultar el menú principal en pantallas pequeñas */
+   
+
+
+    #searchContainer {
+        display: none;    
+        }
+        
+    
+
+       
+    
+    #pageHeader {
+        background-color:transparent; /* Color de fondo con opacidad */
+        color: #fcf4f4;
+        text-align: center;
+        padding: 20px;
+        transition: background-color 0.3s ease; /* Transición de color de fondo suave */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Aseguramos que el encabezado esté por encima del contenido */
+    }
+    
+    #pageHeader.hidden {
+        top: -1000px; /* Movemos el encabezado fuera de la pantalla al ocultarlo */
+    }
+    
+    /* Cambiar el fondo a blanco y el texto a negro al pasar el cursor */
+    #pageHeader:hover {
+        background-color: #fff; /* Fondo blanco */
+        color: #000; /* Texto y elementos negros */
+    }
+    
+    /* Cambiar el tamaño del texto de h1 en el encabezado */
+    #pageHeader h1 {
+        font-size: 25px; /* Ajusta el tamaño del texto según tus preferencias */
+        font-weight: bold; /* Aplicar negrita */
+        text-align: left; /* Centrar el h1 */
+        margin: 5px;
+    }
+    
+    #pageHeader .hamburger{
+      
+        position: fixed;
+        top: 20px; /* Ajusta la distancia desde la parte superior */
+        right: 25px; /* Ajusta la distancia desde la derecha */
+        color: #000000;
+        font-size: 18px;
+    
+    }
+     
+    /* Estilos para la sección de carrito de compras */
+    /* Icono de la bolsa de compras */
+    /*icono bolsita ajuste de pocision*/
+    #cartLink {
+        position: fixed;
+        top: 15px; /* Ajusta la distancia desde la parte superior */
+        right: 60px; /* Ajusta la distancia desde la derecha */
+        color: #000000;
+        font-size: 18px;
+        
+    }
+    
+    /*cambio de color el icono bolsito, items de menu,busqueda cuando el fondo del encabezado este blanco*/
+    #pageHeader:hover #searchButton,
+    #pageHeader:hover #botoncarrito,
+    #pageHeader:hover nav ul li a {
+        color: #000; /* Cambiar a color negro cuando el fondo es blanco */
+    }
+
+    #pageHeader #botoncarrito:hover {
+        color: #ff00d4;
+       
+    }
+    
+    /*mostrar linea de bajo cuando ppase el cursor*/ 
+    #pageHeader #searchButton:hover,
+    #pageHeader nav ul li:hover{
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 2px solid #000;
+    }
+    
+    
+    
+    
+    /* Estilos para etiquetas de tamaño y color */
+    label {
+        font-weight: bold; /* Hace que las etiquetas sean negritas */
+        display: inline-block; /* Hace que las etiquetas ocupen solo el espacio necesario */
+        width: 30%; /* Ancho de las etiquetas */
+        margin-top: 10px; /* Espacio superior entre etiquetas */
+    }
+
+/* Estilos para las secciones */
+section {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    padding: 40px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    margin: 70px;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.button a {
+    text-decoration: none; /* Quitar la línea decorativa */
+    color: #ffffff; /* Cambiar el color del texto a amarillo (#ffcc00) */
+}
+.button a:hover{
+    color: #000;
+}
+
+
+.button {
+    font-size: 11px;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    position: absolute;
+    margin: 40px;
+    overflow: hidden;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Margen de abajo */
+    left: 0;
+    width: 100%;
+    height: 1px; /* Altura de la línea blanca */
+    background-color: #fff; /* Color de la línea blanca */
+    
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.button:hover::before {
+    transform: scaleY(1);
+    transition: none; /* Puedes eliminar esta línea si no deseas transición */
+}
+
+
+
+
+/* Estilos para la Sección 1 */
+#seccion1 {
+    background-image: url('imagenes/Black\ Modern\ Fashion\ Studio\ Presentation.jpg');
+    padding: 190px;
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Estilos para la Sección 2 */
+#seccion2 {
+    background-image: url('imagenes/1.jpg'); /* Cambia 'imagen-seccion2.jpg' por la imagen de fondo de la Sección 2 */
+    padding: 190px;
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Estilos para la Sección 3 */
+#seccion3 {
+    background-image: url('imagenes/2.jpg'); /* Cambia 'imagen-seccion3.jpg' por la imagen de fondo de la Sección 3 */
+    padding: 190px;
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Estilos para la Sección 4 */
+#seccion4 {
+    background-image: url('imagenes/1.jpg'); /* Cambia 'imagen-seccion4.jpg' por la imagen de fondo de la Sección 4 */
+    padding: 190px;
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+
+/* Estilos adicionales para la Sección 5 */
+#seccion5 {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto en blanco */
+    text-align: center;
+    
+}
+
+#seccion5 h2 {
+    font-size: 36px;
+    margin-bottom: 20px; /* Espacio bajo el título */
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s; /* Transición de color al pasar el cursor */
+}
+
+.social-icons a:hover {
+    color: #bbbbbb; /* Color gris claro al pasar el cursor */
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 40px; /* Espacio bajo el párrafo */
+}
+
+.contact-form {
+    margin-top: 40px;
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: transparent; /* Fondo transparente para los campos de entrada y el botón */
+    border: 1px solid #fff; /* Borde blanco para los campos de entrada y el botón */
+    color: #fff; /* Texto en blanco */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb; /* Color gris claro para el marcador de posición */
+}
+
+.contact-form button {
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #fff; /* Botón de fondo blanco */
+    color: #000; /* Texto negro para el botón */
+    transition: background-color 0.3s, color 0.3s; /* Transición de color de fondo y texto al pasar el cursor */
+}
+
+.contact-form button:hover {
+    background-color: #000; /* Color de fondo negro al pasar el cursor */
+    color: #fff; /* Texto blanco al pasar el cursor */
+}
+
+
+/* Pie de página */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 1px 0;
+    font-size: 16px;
+}
+
+
+menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.hamburger{
+    position: fixed;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    color: #fff;
+    font-size: 18px;
+    
+}
+
+
+#pageHeader:hover .hamburger div,
+#pageHeader:hover .hamburger div::before,
+#pageHeader:hover .hamburger div::after {
+    background-color: #000; /* Cambiar a color negro cuando el fondo es blanco */
+}
+
+
+.menu {
+    display: none;
+    background-color: #fff; /* Fondo blanco */
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 100%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 10px 0; /* Espaciado dentro del menú desplegable */
+}
+
+.menu.active {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column; /* Alineación vertical de los elementos del menú */
+}
+
+.logo-menu {
+    text-align: center; /* Centra el logo horizontalmente */
+    margin-bottom: 20px; /* Espaciado entre el logo y los enlaces */
+}
+
+.logo-menu img {
+    max-width: 100%; /* Ajusta el tamaño del logo para que quepa dentro del menú */
+}
+
+.menu li {
+    margin: 10px 0;
+    text-align: left; /* Alineación del texto a la izquierda */
+    animation: slideIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000; /* Texto negro */
+    padding-left: 20px; /* Espaciado a la izquierda del texto */
+    position: relative;
+    transition: color 0.3s; /* Transición de color de texto */
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    color: rgb(71, 71, 71); /* Cambia el color del texto al pasar el mouse o seleccionar */
+}
+
+.menu li a::after {
+    content: "👜";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2000%;
+    height: 2px;
+    background-color: rgb(0, 0, 0); /* Línea debajo del enlace */
+
+    transform: scaleX(0); /* Inicialmente invisible */
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+
+.menu li a:hover::after,
+.menu li a:focus::after {
+    transform: scaleX(1); /* Aparece la línea al pasar el mouse o seleccionar */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    
+    margin: 2px; /* Espaciado alrededor del logo */
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff; /* Color de las barras del ícono de hamburguesa */
+    margin: 4px 0;
+    transition: all 300ms;
+    transform-origin:1px 2px;
+   
+}
+
+.hamburger:active .line1__bar {
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.hamburger:active .line2__bar {
+   opacity: 0;
+  margin-left: -30px;
+}
+
+.hamburger:active .line3__bar {
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+/* Animación para el desplazamiento de los elementos del menú */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+/* Estilos para el botón de eliminar con el ícono "x" */
+.eliminar-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+}
+
+
+
+
+
+
+/* Estilos para carrito de comprAS */
+
+/* Estilos para el botón del carrito */
+/* Estilos para el botón de carrito */
+#botoncarrito {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 35px;
+    font-size: 20px;
+    cursor: pointer;
+    animation: latido 1s infinite alternate; /* Agregar la animación de latido */
+}
+
+/* Definición de la animación de latido */
+@keyframes latido {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+#botoncarrito:hover{
+    background-color: transparent;
+    color: #ff1bba;
+}
+
+/* Estilos para el contenedor del carrito */
+#cartContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 10px;
+    z-index: 1000;
+    display: none;
+}
+
+/* Estilos para el título del carrito */
+#cartContainer h3 {
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilos para la lista de elementos en el carrito */
+#carrito {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos para cada elemento en el carrito */
+#carrito li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para el total */
+#total {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Estilos para el botón de finalizar compra */
+#finalizarCompra {
+    background-color: #0c0c0c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px ;
+    
+    
+}
+#finalizarCompra:hover {
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #000000; /* Agrega un borde negro al botón al hacer hover */
+}
+
+/* Estilos para el botón de cierre del carrito */
+.cerrar-carrito {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical según tu preferencia */
+    right: 10px; /* Ajusta la posición horizontal según tu preferencia */
+    background-color: #333; /* Color de fondo gris oscuro */
+    color: #fff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Hace que el botón sea circular */
+    width: 30px; /* Ancho del botón */
+    height: 30px; /* Altura del botón */
+    font-size: 18px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse por encima */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: beat 1s infinite; /* Aplica la animación de latido */
+}
+
+.cerrar-carrito:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+/* Animación de latido */
+@keyframes beat {
+    0% { transform: scale(1); } /* Escala normal */
+    50% { transform: scale(1.1); } /* Escala aumentada al 50% */
+    100% { transform: scale(1); } /* Regresa a la escala normal */
+}
+
+/* Estilos para el botón de enviar */
+/* Estilos para el botón de enviar */
+.btn-enviar {
+    background-color: white;
+    color: black;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px; /* Centra el botón horizontalmente */
+    
+}
+
+
+}
